@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chúc Mừng Giáng Sinh</title>
+    <html>
+      <head>
+        <style>
+          body {
+            background-image: url("https://media1.popsugar-assets.com/files/thumbor/P-nUrPVnQQ1T9AiAbA__Ex_mWyg=/fit-in/792x1188/filters:format_auto():upscale()/2020/12/09/903/n/1922507/e61783748d617ad8_roberto-nickson-5PQn41LFsQk-unsplash.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+          }
+
+          .santa,
+          .santa2,
+          .tree,
+          .deer {
+            position: fixed;
+          }
+
+          .santa {
+            left: -300px;
+            top: 100px;
+            animation: santa 6s linear forwards;
+          }
+
+          .tree {
+            bottom: 350px;
+            opacity: 0;
+            animation: tree 2s linear 6s forwards;
+          }
+
+          .santa2 {
+            bottom: 390px;
+            left: 450px;
+            opacity: 0;
+            animation: santa2 2s linear 6s forwards;
+            transform: scaleX(-1);
+          }
+
+          .deer {
+            width: 100%;
+            height: 100%;
+            top: -410px;
+            opacity: 0;
+            animation: deer 1s 6s forwards;
+          }
+          @keyframes deer {
+            0% {
+              opacity: 0;
+            }
+
+            100% {
+              opacity: 1;
+            }
+          }
+
+          @keyframes santa2 {
+            0% {
+              opacity: 0;
+              transform: scale(1.5);
+            }
+
+            100% {
+              opacity: 1;
+              transform: scale(1);
+            }
+          }
+
+          @keyframes tree {
+            0% {
+              opacity: 0;
+            }
+
+            100% {
+              opacity: 1;
+            }
+          }
+
+          @keyframes santa {
+            0% {
+              left: -300px;
+              top: 200px;
+            }
+
+            40% {
+              left: 170px;
+              top: 40px;
+            }
+
+            60% {
+              left: 460px;
+              top: 100px;
+            }
+
+            80% {
+              left: 720px;
+              top: 50px;
+            }
+
+            100% {
+              left: 960px;
+              top: 40px;
+            }
+          }
+        </style>
+        <script src="//code.jquery.com/jquery-2.1.0.js"></script>
+        <script
+          type="text/javascript"
+          src="https://cdnjs.cloudflare.com/ajax/libs/JQuery-Snowfall/1.7.4/snowfall.jquery.min.js"
+        ></script>
+        <script
+          src="https://cdnjs.cloudflare.com/ajax/libs/JQuery-Snowfall/1.7.4/snowfall.min.js"
+          integrity="sha512-V8gB+nZbgh3dHE0GjkUWxviH309p7PyDnnxj5VnQeSfyKdAiMQooXkym/eq2NGDaSgub6VfZ14FaMDb94sS9dw=="
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer"
+        ></script>
+        <script>
+          jQuery(document).ready(function () {
+            jQuery(document).snowfall({
+              flakeCount: 200,
+              maxSpeed: 8,
+              maxSize: 8,
+              minSize: 4,
+            });
+          });
+        </script>
+      </head>
+
+      <body>
+        <script
+          src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+          type="module"
+        ></script>
+        <!-- Santa Claus -->
+        <dotlottie-player
+          class="santa"
+          src="https://lottie.host/3917bbbc-0b3b-44e2-aeec-c57c52f869c0/hjFE9Eu7O7.json"
+          background="transparent"
+          speed="1.5"
+          style="width: 450px; height: 450px"
+          loop
+          autoplay
+        ></dotlottie-player>
+        <!-- Christmas Tree -->
+        <dotlottie-player
+          class="tree"
+          src="https://lottie.host/8ac84019-f174-4d0c-8409-b3fad6f7437c/hPjp5FxjrN.json"
+          background="transparent"
+          speed="1"
+          style="width: 600px; height: 600px"
+          loop
+          autoplay
+        ></dotlottie-player>
+        <!-- Santa Claus 2 -->
+        <dotlottie-player
+          class="santa2"
+          src="https://lottie.host/1e9e1a75-637e-40a2-a712-007b605f4133/LF5Iyye6IP.json"
+          background="transparent"
+          speed="1"
+          style="width: 450px; height: 450px"
+          loop
+          autoplay
+        ></dotlottie-player>
+        <dotlottie-player
+          class="deer"
+          src="https://lottie.host/743f3729-bc9e-46dc-bb35-e4312a6ad948/tZJCZRhfEg.json"
+          background="transparent"
+          speed="1"
+          style="width: 100%; height: 100%"
+          loop
+          autoplay
+        ></dotlottie-player>
+      </body>
+    </html>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "Arial", sans-serif;
+        overflow: hidden;
+      }
+
+      .slide1,
+      .slide2 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        transition: opacity 1s ease-in-out;
+      }
+
+      .slide1 {
+        background-color: #003366;
+        opacity: 1;
+      }
+
+      .slide2 {
+        background-color: #004d00; /* Màu nền cho slide thứ 2 */
+        opacity: 0;
+        visibility: hidden;
+      }
+
+      h1 {
+        font-size: 2em;
+        margin-bottom: 20px;
+      }
+
+      button {
+        padding: 10px 20px;
+        font-size: 1.5em;
+        background-color: #ff4d4d;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      button:hover {
+        background-color: #ff1a1a;
+      }
+
+      /* Hiệu ứng tuyết */
+      .snowflake {
+        position: fixed;
+        top: 0;
+        background-color: white;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        opacity: 0.8;
+        animation: fall linear infinite;
+      }
+
+      @keyframes fall {
+        0% {
+          transform: translateY(0);
+        }
+        100% {
+          transform: translateY(100vh);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slide1">
+      <h1>MERRY CHRISTMAS❤️</h1>
+      <button id="giftButton">Nhận Quà</button>
+      <div class="snowflakes" aria-hidden="true">
+        <!-- Tạo hiệu ứng tuyết -->
+      </div>
+    </div>
+    <div class="slide2">
+      <h1 style="margin-bottom: 20px">
+        Chúc emmm giáng sinhh vuii vê hanh phúc nhaaaa ❤️!
+      </h1>
+      <h2>iuu péee ❤️</h2>
+      <div class="tree"></div>
+    </div>
+
+    <script>
+      // Tạo hiệu ứng tuyết
+      function createSnowflake() {
+        const snowflake = document.createElement("div");
+        snowflake.classList.add("snowflake");
+        snowflake.style.left = Math.random() * window.innerWidth + "px";
+        snowflake.style.animationDuration = Math.random() * 3 + 2 + "s";
+        snowflake.style.opacity = Math.random();
+        snowflake.style.width = snowflake.style.height =
+          Math.random() * 10 + 5 + "px";
+        document.body.appendChild(snowflake);
+
+        // Loại bỏ bông tuyết sau khi nó rơi xong
+        setTimeout(() => {
+          snowflake.remove();
+        }, 5000);
+      }
+
+      // Tạo tuyết rơi mỗi 100ms
+      setInterval(createSnowflake, 100);
+
+      // Chuyển slide khi nhấn nút
+      const giftButton = document.getElementById("giftButton");
+      giftButton.addEventListener("click", () => {
+        const slide1 = document.querySelector(".slide1");
+        const slide2 = document.querySelector(".slide2");
+        slide1.style.opacity = "0";
+        slide1.style.visibility = "hidden";
+        slide2.style.opacity = "1";
+        slide2.style.visibility = "visible";
+
+        // Hiển thị hiệu ứng tuyết trong slide 2
+        for (let i = 0; i < 100; i++) {
+          createSnowflake();
+        }
+      });
+
+      // Vẽ cây thông Giáng Sinh
+      const treeContainer = document.createElement("div");
+      treeContainer.style.position = "relative";
+      treeContainer.style.width = "100px";
+      treeContainer.style.height = "150px";
+      treeContainer.style.marginTop = "20px";
+      treeContainer.style.left = "50%";
+      treeContainer.style.transform = "translateX(-50%)";
+
+      const tree = document.createElement("div");
+      tree.style.width = "100px";
+      tree.style.height = "150px";
+      tree.style.backgroundColor = "green";
+      tree.style.position = "absolute";
+      tree.style.bottom = "0";
+      tree.style.left = "50%";
+      tree.style.transform = "translateX(-50%)";
+      tree.style.clipPath = "polygon(50% 0%, 100% 100%, 0% 100%)";
+      treeContainer.appendChild(tree);
+
+      const trunk = document.createElement("div");
+      trunk.style.width = "30px";
+      trunk.style.height = "20px";
+      trunk.style.backgroundColor = "brown";
+      trunk.style.position = "absolute";
+      trunk.style.bottom = "-20px";
+      trunk.style.left = "50%";
+      trunk.style.transform = "translateX(-50%)";
+      treeContainer.appendChild(trunk);
+
+      document.querySelector(".slide2").appendChild(treeContainer);
+    </script>
+  </body>
+</html>
